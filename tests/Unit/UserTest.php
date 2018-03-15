@@ -15,8 +15,8 @@ class UserTest extends TestCase
      * @return void
      */
     public function testExample(){
-        $user = User::find(1);
-        dd($user);
+        $user = User::inRandomOrder()->first();
+        //dd($user);
         $this->assertInternalType( 'int', $user->id);
     }
 }
